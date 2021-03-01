@@ -2,12 +2,10 @@
   <div class="tab-bar-item" @click="itemClick">
     <div v-if="isActive">
       <slot name="item-icon">
-        <img src="~assets/img/pos_n.png"/>
       </slot>
     </div>
     <div v-else>
       <slot name="item-icon-active">
-        <img src="~assets/img/pos_s.png"/>
       </slot>
     </div>
     <div :style="{color: textColor}">
