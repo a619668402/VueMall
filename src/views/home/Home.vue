@@ -1,9 +1,9 @@
 <template>
-  <div id="home">
+  <div id="home" class="wrapper">
     <nav-bar id="nav-bar">
       <div slot="nav-center" id="nav-center">购物街</div>
     </nav-bar>
-    <scroll id="scorll">
+    <scroll class="content">
       <home-banner id="banner" :banners="banners"/>
       <home-recommand :datas="recommands"/>
       <home-feature/>
@@ -46,7 +46,7 @@
     computed: {
       goods() {
         const arr = [];
-        for (let i = 0; i < 100; i ++) {
+        for (let i = 0; i < 9; i ++) {
           arr.push(i)
         }
         return arr
@@ -71,12 +71,16 @@
   #home {
     position: relative;
     height: 100vh;
-    width: 100%;
   }
   #nav-bar {
     background-color: deeppink;
     height: 44px;
     width: 100%;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   #nav-center {
     color: white;
@@ -85,13 +89,12 @@
     text-align: center;
   }
 
-  #scorll {
+  .content {
+    overflow: hidden;
     position: absolute;
+    top: 44px;
+    bottom: 49px;
     left: 0;
     right: 0;
-    bottom: 49px;
-    top: 44px;
-    overflow: hidden;
-    overflow-y: scroll;
   }
 </style>

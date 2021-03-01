@@ -15,10 +15,17 @@
 </script>
 
 <style scoped>
+  .goods-item {
+    width: 48%;
+    height: 240px;
+    text-align: center;
+  }
+
   .goods-item-img {
-    height: 250px;
+    width: 100%;
+    height: 200px;
     background-color: orange;
-    padding: 0 2px 0 2px;
+    border-radius: 3px;
   }
 
   .goods-item-text {

@@ -26,13 +26,6 @@
   #goods {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6px;
-    height: 290px;
-  }
-  .goods-item {
-    width: 48%;
-    text-align: center;
+    justify-content: space-around;
   }
 </style>
